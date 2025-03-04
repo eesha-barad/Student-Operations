@@ -47,3 +47,19 @@ public class StudentOperations {
             System.out.println(student.getPrn() + "\t" + student.getName() + "\t" + student.getMarks() + "\t" + student.getPosition());
         }
     }
+
+    // Function to delete a student by PRN
+    public boolean deleteStudent() {
+        System.out.print("Enter PRN to delete: ");
+        int prn = sc.nextInt();
+
+        for (int i = 0; i < studentDatabase.size(); i++) {
+            if (studentDatabase.get(i).getPrn() == prn) {
+                System.out.println(studentDatabase.get(i).getName() + " removed from the database.");
+                studentDatabase.remove(i);
+                return true;
+            }
+        }
+        System.out.println("Student with PRN " + prn + " not found.");
+        return false;
+    }
