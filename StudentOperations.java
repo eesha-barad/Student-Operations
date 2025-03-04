@@ -124,3 +124,18 @@ public class StudentOperations {
         }
         System.out.println("Student with name '" + desiredName + "' not found.");
     }
+
+    // Function to search for a student by Position
+    public void searchByPosition() {
+        System.out.print("Enter Position to search: ");
+        int desiredPosition = sc.nextInt();
+
+        for (Student student : studentDatabase) {
+            if (student.getPosition() == desiredPosition) {
+                System.out.println("Student found: " + student);
+                return;
+            }
+        }
+        System.out.println("Student with position '" + desiredPosition + "' not found.");
+    }
+}
