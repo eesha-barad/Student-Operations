@@ -95,3 +95,17 @@ public class StudentOperations {
         }
         System.out.println("Student with PRN " + prn + " not found.");
     }
+
+    // Function to search for a student by PRN
+    public void searchByPrn() {
+        System.out.print("Enter PRN to search: ");
+        int prn = sc.nextInt();
+
+        for (Student student : studentDatabase) {
+            if (student.getPrn() == prn) {
+                System.out.println("Student found: " + student);
+                return;
+            }
+        }
+        System.out.println("Student with PRN " + prn + " not found.");
+    }
