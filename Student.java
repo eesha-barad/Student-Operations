@@ -29,3 +29,51 @@ public class Student {
         this(prn, name, marks); // Calls the constructor with PRN, name, and marks
         this.dob = dob;
     }
+
+    // Getters and Setters for encapsulated fields
+    public int getPrn() {
+        return prn;
+    }
+
+    public void setPrn(int prn) {
+        this.prn = prn;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public double getMarks() {
+        return marks;
+    }
+
+    public void setMarks(double marks) {
+        this.marks = marks;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    // Overriding toString() method to display student details
+    @Override
+    public String toString() {
+        return "Student [prn=" + prn + ", name=" + name + ", dob=" + dob + ", marks=" + marks + ", position=" + position + "]";
+    }
+}
