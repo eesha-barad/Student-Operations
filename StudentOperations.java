@@ -109,3 +109,18 @@ public class StudentOperations {
         }
         System.out.println("Student with PRN " + prn + " not found.");
     }
+
+    // Function to search for a student by Name
+    public void searchByName() {
+        System.out.print("Enter Name to search: ");
+        sc.nextLine(); // Consume newline
+        String desiredName = sc.nextLine();
+
+        for (Student student : studentDatabase) {
+            if (student.getName().equalsIgnoreCase(desiredName)) {
+                System.out.println("Student found: " + student);
+                return;
+            }
+        }
+        System.out.println("Student with name '" + desiredName + "' not found.");
+    }
