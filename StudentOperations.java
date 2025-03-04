@@ -37,3 +37,13 @@ public class StudentOperations {
             System.out.println("Student added successfully!\n");
         }
     }
+
+    // Function to display all students
+    public void printStudentDetails() {
+        System.out.println("\n------ Student List ------");
+        System.out.println("PRN\tName\tMarks\tPosition");
+
+        for (Student student : studentDatabase) {
+            System.out.println(student.getPrn() + "\t" + student.getName() + "\t" + student.getMarks() + "\t" + student.getPosition());
+        }
+    }
